@@ -1,0 +1,8 @@
+---
+services:
+  vdp-scanner:
+    image: 'cisagov/vdp-scanner:0.0.2'
+    init: true
+    restart: "no"
+    volumes:
+      - .output:/task/host_mount
