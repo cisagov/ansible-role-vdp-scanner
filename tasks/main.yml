@@ -2,18 +2,18 @@
 # tasks file for vdp-scanner
 - name: Create the /var/cyhy/vdp directory
   ansible.builtin.file:
+    mode: 0755
     path: /var/cyhy/vdp
     state: directory
-    mode: 0755
 
 - name: Copy Docker Compose file
   ansible.builtin.copy:
-    src: docker-compose.yml
     dest: /var/cyhy/vdp
     mode: 0644
+    src: docker-compose.yml
 
 - name: Create the mount point for output
   ansible.builtin.file:
+    mode: 0755
     path: /var/cyhy/vdp/output
     state: directory
-    mode: 0755
