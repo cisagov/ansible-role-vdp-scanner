@@ -1,10 +1,10 @@
 ---
 galaxy_info:
-  author: First Last
-  description: Skeleton Ansible role
+  author: Nicholas McDonnell
+  description: VDP scanner Docker Compose
   company: CISA Cyber Assessments
   galaxy_tags:
-    - skeleton
+    - vdp
   license: CC0
   # With the release of version 2.10, Ansible finally correctly
   # identifies Kali Linux as being the Kali distribution of the Debian
@@ -13,9 +13,10 @@ galaxy_info:
   # 2.10 or newer.
   min_ansible_version: 2.10
   platforms:
-    - name: Amazon
-      versions:
-        - 2
+    # Amazon Linux 2 does not currently have a supported version of Docker
+    # - name: Amazon
+    #   versions:
+    #     - 2
     - name: Debian
       versions:
         - stretch
@@ -32,6 +33,8 @@ galaxy_info:
       versions:
         - bionic
         - focal
-  role_name: skeleton
+  role_name: vdp_scanner
 
-dependencies: []
+dependencies:
+  - src: https://github.com/cisagov/ansible-role-docker
+    name: docker

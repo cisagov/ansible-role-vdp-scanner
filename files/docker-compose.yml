@@ -1,0 +1,8 @@
+---
+version: '3.1'
+
+services:
+  vdp-scanner:
+    image: 'cisagov/vdp-scanner:0.0.2'
+    volumes:
+      - ./output:/task/host_mount
