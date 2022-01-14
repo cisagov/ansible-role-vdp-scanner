@@ -14,10 +14,6 @@ galaxy_info:
   min_ansible_version: 2.10
   namespace: cisagov
   platforms:
-    # Amazon Linux 2 does not currently have a supported version of Docker
-    # - name: Amazon
-    #   versions:
-    #     - 2
     - name: Debian
       versions:
         - stretch
