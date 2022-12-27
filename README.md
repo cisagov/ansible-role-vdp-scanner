@@ -1,8 +1,7 @@
 # ansible-role-vdp-scanner #
 
 [![GitHub Build Status](https://github.com/cisagov/ansible-role-vdp-scanner/workflows/build/badge.svg)](https://github.com/cisagov/ansible-role-vdp-scanner/actions)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/cisagov/ansible-role-vdp-scanner.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-vdp-scanner/alerts/)
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/cisagov/ansible-role-vdp-scanner.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-vdp-scanner/context:python)
+[![CodeQL](https://github.com/cisagov/ansible-role-vdp-scanner/workflows/CodeQL/badge.svg)](https://github.com/cisagov/ansible-role-vdp-scanner/actions/workflows/codeql-analysis.yml)
 
 This is an Ansible role to setup appropriate directories and an appropriate
 [Docker Compose](https://docs.docker.com/compose/) configuration to run the
@@ -36,8 +35,10 @@ Here's how to use it in a playbook:
 - hosts: all
   become: yes
   become_method: sudo
-  roles:
-    - vdp_scanner
+  tasks:
+    - name: Install the VDP scanner composition
+      ansible.builtin.include_role:
+        name: vdp_scanner
 ```
 
 ## Contributing ##
