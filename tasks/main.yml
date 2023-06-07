@@ -2,18 +2,24 @@
 # tasks file for vdp-scanner
 - name: Create the /var/cyhy/vdp directory
   ansible.builtin.file:
+    group: "{{ file_owner_group | default(omit) }}"
     mode: 0755
+    owner: "{{ file_owner_username | default(omit) }}"
     path: /var/cyhy/vdp
     state: directory
 
 - name: Copy Docker Compose file
   ansible.builtin.copy:
     dest: /var/cyhy/vdp
+    group: "{{ file_owner_group | default(omit) }}"
     mode: 0644
+    owner: "{{ file_owner_username | default(omit) }}"
     src: docker-compose.yml
 
 - name: Create the mount point for output
   ansible.builtin.file:
+    group: "{{ file_owner_group | default(omit) }}"
     mode: 0755
+    owner: "{{ file_owner_username | default(omit) }}"
     path: /var/cyhy/vdp/output
     state: directory
