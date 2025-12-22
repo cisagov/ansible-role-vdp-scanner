@@ -1,6 +1,7 @@
 # ansible-role-vdp-scanner #
 
 [![GitHub Build Status](https://github.com/cisagov/ansible-role-vdp-scanner/workflows/build/badge.svg)](https://github.com/cisagov/ansible-role-vdp-scanner/actions)
+[![License](https://img.shields.io/github/license/cisagov/ansible-role-vdp-scanner)](https://spdx.org/licenses/)
 [![CodeQL](https://github.com/cisagov/ansible-role-vdp-scanner/workflows/CodeQL/badge.svg)](https://github.com/cisagov/ansible-role-vdp-scanner/actions/workflows/codeql-analysis.yml)
 
 This is an Ansible role to setup appropriate directories and an appropriate
